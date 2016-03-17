@@ -5,9 +5,20 @@
             <meta name="viewport" content="width=device-width">
             <title><?php bloginfo('name'); ?></title>
             <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-             <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700' rel='stylesheet' type='text/css'>
             <?php wp_head(); ?>
         </head>
         <body <?php body_class(); ?>>
+        <div id="header">
 <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 <h2><?php bloginfo('description'); ?></h2>
+
+<nav class="header-nav">
+    <?php $args = array(
+        'theme_location' => 'primary'
+    );
+    ?>
+    <?php wp_nav_menu($args); ?>
+</nav>
+
+</div>
