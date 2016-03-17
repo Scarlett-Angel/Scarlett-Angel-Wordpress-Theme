@@ -11,3 +11,15 @@ register_nav_menus(array(
                          'primary' => __('Primary Menu'),
                          'footer' => __('Footer Menu')
                          ));
+
+                         /*
+                          *Function Inputs:
+                          *input string to be exploded
+                          *delay increment Seconds
+                          *delay incremend Miliseconds
+                          *array of classes for effects
+                          *iteration delay
+                          *
+                          *
+                          *
+                          */
