@@ -23,3 +23,8 @@ register_nav_menus(array(
                           *
                           *
                           */
+ function stringtowords ($input){
+	$output = array(strlen($input));
+	$output = explode(" ",$input);
+	return $output;
+}                        
