@@ -9,7 +9,14 @@ if (have_posts()):
 ?>"><?php
         the_title();
 ?></a></h2>
-
+<?php
+        $string = "This has many words This has many words This has many words This has many words This has many words This has many words "?>
+<?php
+        wordEffects($string, 0, 15, 0, array(
+            "style1",
+            "style2"
+        ), "something:thing;", "else:thing;");
+?>
 <?php
         the_content();
 ?>
