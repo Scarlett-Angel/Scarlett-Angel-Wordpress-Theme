@@ -1,4 +1,16 @@
 <?php
+//Body classes
+
+//add to splash-template page template
+function SA_add_body_class ($classes){
+	if (is_page_template('splash-template.php')){
+		$classes[] = 'splash-template';
+	}
+	$classes[] = 'splash-template';
+	return $classes;
+}
+
+add_filter('body_class', 'SA_add_body_class');
 
 //Add widget location
 function scarlett_widget_init() {

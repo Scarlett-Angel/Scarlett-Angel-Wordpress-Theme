@@ -9,16 +9,9 @@
             <?php wp_head(); ?>
         </head>
         <body <?php body_class(); ?>>
-        <div id="header">
-<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-<h2><?php bloginfo('description'); ?></h2>
-
-<nav class="header-nav">
-    <?php $args = array(
-        'theme_location' => 'primary'
-    );
-    ?>
-    <?php wp_nav_menu($args); ?>
-</nav>
-
-</div>
+        <div id="page">
+            <div id="main" class="wrap">
+<?php
+//exclude default header if splash page
+ (is_page_template('splash-template.php') ?  : include 'default_header.php'); ?>
+<div id="main-content">
