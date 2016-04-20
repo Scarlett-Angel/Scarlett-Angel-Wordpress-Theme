@@ -1,6 +1,6 @@
 <?php
 //Body classes
-
+include ('dynamic/web-design.php');
 //add to splash-template page template
 function SA_add_body_class ($classes){
 	if (is_page_template('splash-template.php')){
