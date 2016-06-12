@@ -1,48 +1,109 @@
 <?php
-function saw2_couldNot(){
-    switch(rand(1,2)){
-        case 1:
-            echo "couldn't";
-            break;
-        case 2:
-            echo "could not";
-            break;
-    }
-}
-function saw2_isNot(){
-    switch(rand(1,2)){
-        case 1:
-            echo "not";
-            break;
-        case 2:
-            echo "is not";
-            break;
-    }
-}
-function saw2_makeCertain(){
-    switch (rand(1,2)){
-        case 1:
-            echo "make ";
-            saw1_certain();
-            break;
-        case 2:
-            saw1_ensure();
-            break;
-    }
-}
-/// Needs better plcement
 
-function saw1n_appraisal(){
+function word_showYou(){
+    switch(rand(1,4)){
+        case 1:
+            echo "show you";
+            break;
+        case 2:
+            echo "prove";
+            break;
+        case 3:
+            echo "prove to you";
+            break;
+        case 4:
+            echo "show the world";
+    }
+}
+function word_designers(){
+    switch (rand(1,7)){
+        case 1;
+            echo "companies";
+            break;
+        case 2:
+            echo "studios";
+            break;
+        case 3:
+            echo "businesses";
+            break;
+        case 4;
+            echo "professionals";
+            break;
+        case 5:
+            echo "experts";
+            break;
+        case 6:
+            echo "consultants";
+            break;
+        case 7:
+            echo "organisations";
+            break;
+    }
+}
+function word_setsUsApart(){
+    switch (rand(1,3)){
+        case 1;
+            echo "sets us apart";
+            break;
+        case 2:
+            echo "makes us different";
+            break;
+        case 3:
+            echo "makes us stand out";
+            break;
+    }
+}
+function word_dontPay(){
     switch (rand(1,2)){
+        case 1;
+            echo "don't pay";
+            break;
+        case 2:
+            echo "are not charged";
+            break;
+    }
+}
+function word_ensure(){
+    switch (rand(1,4)){
+        case 1;
+            echo "ensure";
+            break;
+        case 2:
+            echo "make sure";
+            break;
+        case 3:
+            echo "certify";
+            break;
+        case 4:
+            echo "make certain";
+            break;
+        case 5:
+            echo "guarantee";
+            break;
+    }
+}
+function word_n_appraisal(){
+    switch (rand(1,3)){
         case 1:
             echo "n appraisal";
             break;
         case 2:
-            echo " ";
-            saw1_quote();
+            word_quote();
             break;
     }
 }
+function word_quote(){
+    switch(rand(1,2)){
+        case 1:
+            echo " cost";
+            break;
+        case 2;
+            echo " quote";
+            break;
+    }
+}
+
+
 
 function word_yourWallet(){
     switch (rand(1,3)){
@@ -54,11 +115,22 @@ function word_yourWallet(){
             break;
         case 3:
             echo "your heart when you see the";
-            saw1_quote();
+            word_quote();
             break;     
     }
 }
-
+function word_costAFortune(){
+    switch(rand(1,2)){
+        case 1:
+            echo "cost ";
+            word_thousandsOfPounds();
+            break;
+        case 2:
+            echo "break ";
+            word_yourWallet();
+            break;
+    }
+}
 function word_thousandsOfPounds(){
     switch (rand(1,4)){
         case 1;
@@ -79,14 +151,149 @@ function word_thousandsOfPounds(){
         case 6:
             echo "hundreds pounds";
             break;
-        case 7:
-            echo"an uncomfortable amount of ";
-            saw1_money(); 
     }
 }
-
-
-
+function word_need(){
+    switch (rand(1,2)){
+        case 1;
+            echo "have";
+            break;
+        case 2:
+            echo "need";
+            break;
+    }
+}
+function word_really(){
+    switch (rand(1,27)){
+        case 1:
+            echo "absolutely";
+            break;
+        case 2:
+            echo "really";
+            break;
+        case 3:
+            echo "actually";
+            break;
+        case 4:
+            echo "genuinely";
+            break;
+        case 5:
+            echo "literally";
+            break;
+        case 6:
+            echo "admittedly";
+            break;
+        case 7:
+            echo "as a matter of fact";
+            break;
+        case 8:
+            echo "assuredly";
+            break;
+        case 9:
+            echo "beyond doubt";
+            break;
+        case 10:
+            echo "categorically";
+            break;
+        case 11:
+            echo "certainly";
+            break;
+        case 12:
+            echo "honestly";
+            break;
+        case 13:
+            echo "in actuality";
+            break;
+        case 14:
+            echo "in effect";
+            break;
+        case 15:
+            echo "in fact";
+            break;
+        case 16:
+            echo "in point of fact";
+            break;
+        case 17:
+            echo "in reality";
+            break;
+        case 18:
+            echo "indeed";
+            break;
+        case 19:
+            echo "indubitably";
+            break;
+        case 20:
+            echo "legitimately";
+            break;
+        case 21:
+            echo "of course";
+            break;
+        case 22:
+            echo "positively";
+            break;
+        case 23:
+            echo "precisely";
+            break;
+        case 24:
+            echo "surely";
+            break;
+        case 25:
+            echo "truly";
+            break;
+        case 26:
+            echo "undoubtedly";
+            break;
+        case 27:
+            echo "unquestionably";
+            break;
+    }
+}
+function word_great(){
+    switch (rand(1,14)){
+        case 1:
+            echo "great";
+            break;
+        case 2:
+            echo "stupendous";
+            break;
+        case 3:
+            echo "terrific";
+            break;
+        case 4:
+            echo "extravagant";
+            break;
+        case 5:
+            echo "immense";
+            break;
+        case 6:
+            echo "tremendous";
+            break;
+        case 7:
+            echo "dazzling";
+            break;
+        case 8:
+            echo "excellent";
+            break;
+        case 9:
+            echo "exquisite";
+            break;
+        case 10:
+            echo "fascinating";
+            break;
+        case 11:
+            echo "grand";
+            break;
+        case 12:
+            echo "magnificent";
+            break;
+        case 13:
+            echo "marvelous";
+            break;
+        case 14:
+            echo "wonderful";
+            break;
+    }
+}
 function word_will(){
     switch (rand(1,2)){
         case 1:
@@ -300,9 +507,45 @@ function word_cars(){
             break;
     }
 }
-
-
-
+function word_larger(){
+    switch(rand(1,2)){
+    case 1:
+      echo "larger";
+      break;
+    case 2:
+      echo "bigger";
+      break;
+  }
+}
+function word_small(){
+    switch(rand(1,2)){
+    case 1:
+      echo "small";
+      break;
+    case 2:
+      echo "little";
+      break;
+  }
+}
+function word_kindsOf(){
+    switch(rand(1,5)){
+      case 1:
+        echo "kinds of";
+        break;
+      case 2:
+        echo "types of";
+        break;
+      case 3:
+        echo "makes of";
+        break;
+      case 4:
+        echo "manufacturers of";
+        break;
+      case 5:
+        echo "brands of";
+        break;
+    } 
+}
 function word_buy(){
     switch (rand(1,2)){
         case 1:
@@ -380,6 +623,22 @@ function word_not(){
             break;
         case 4:
             echo "shouldn't you";
+    }
+}
+function word_hassle(){
+    switch (rand(1,4)){
+        case 1:
+            echo "hassle";
+            break;
+        case 2:
+            echo "bother";
+            break;
+        case 3:
+            echo "inconvenience";
+            break;
+        case 4:
+            echo "trouble";
+            break;
     }
 }
 function word_nEasy(){
@@ -504,7 +763,16 @@ function word_very(){
             break;
     }
 }
-
+function word_cash(){
+    switch(rand(1,2)){
+        case 1:
+            echo "cash";
+            break;
+        case 2:
+            echo "money";
+            break;
+    }
+}
 function wordcap_cash(){
     switch(rand(1,2)){
         case 1:
@@ -686,7 +954,16 @@ function word_buyer(){
             break;
     }
 }
-
+function word_car(){
+    switch (rand(1,2)){
+        case 1:
+            echo "car";
+            break;
+        case 2:
+            echo "vehicle";
+            break;
+    }
+}
 function wordcap_car(){
     switch (rand(1,2)){
         case 1:

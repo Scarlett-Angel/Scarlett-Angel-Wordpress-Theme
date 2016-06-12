@@ -1,4 +1,116 @@
 <?php
+function saw1_any(){
+     switch(rand(1,2)){
+        case 1:
+            echo "any";
+            break;
+        case 2:
+            echo "some";
+            break;
+    }
+}
+function saw1_annoyance(){
+          switch(rand(1,4)){
+        case 1:
+            echo "task";
+            break;
+        case 2:
+            echo "pain";
+            break;
+          case 3:
+               echo "discomfort";
+               break;
+          case 4:
+               echo "waste of time";
+               break;
+    }
+}
+function saw1_approximately(){
+     switch(rand(1,15)){
+          case 1:
+               echo "approximately";
+               break;
+          case 2:
+               echo "almost";
+               break;
+          case 3:
+               echo "around";
+               break;
+          case 4:
+               echo "close to";
+               break;
+          case 5:
+               echo "closely";
+               break;
+          case 6:
+               echo "comparitively";
+               break;
+          case 7:
+               echo "generally";
+               break;
+          case 8:
+               echo "in the region of";
+               break;
+          case 9:
+               echo "in the vicinity of";
+               break;
+          case 10:
+               echo "just about";
+               break;
+          case 11:
+               echo "loosely";
+               break;
+          case 12:
+               echo "more or less";
+               break;
+          case 13:
+               echo "not far from";
+               break;
+          case 14:
+               echo "relatively";
+               break;
+          case 15:
+               echo "roughly";
+               break;
+     }
+}
+function saw1_by(){
+     switch(rand(1,2)){
+        case 1:
+            echo "by";
+            break;
+        case 2:
+            echo "with";
+            break;
+    }
+}
+function saw1_changes(){
+     switch(rand(1,2)){
+        case 1:
+            echo "changes";
+            break;
+        case 2:
+            echo "modifcations";
+            break;
+    }
+}
+function saw1_condition(){
+     switch(rand(1,4)){
+        case 1:
+            echo "condition";
+            break;
+        case 2:
+            echo "quality";
+            break;
+          case 3:
+               echo "state";
+               break;
+          case 4:
+               echo "status";
+               break;
+          
+    }
+}
 function saw1_easier(){
     switch(rand(1,2)){
         case 1:
@@ -33,6 +145,16 @@ function saw1_businesses(){
             echo "organisations";
             break;
     }
+}
+function saw1_buy(){
+     switch(rand(1,2)){
+          case 1:
+               echo "buy";
+               break;
+          case 2:
+               echo "purchase";
+               break;
+     }
 }
 function saw1_buying(){
     switch(rand(1,6)){
@@ -175,6 +297,34 @@ function saw1_getting(){
             break;
     }
 }
+function saw1_good(){
+         switch (rand(1,8)){
+        case 1;
+            echo "good";
+            break;
+        case 2:
+            echo "excellent";
+            break;
+        case 3:
+            echo "great";
+            break;
+          case 4:
+               echo "sound";
+               break;
+          case 5:
+               echo "stupendous";
+               break;
+          case 6:
+               echo "super";
+               break;
+          case 7:
+               echo "superb";
+               break;
+          case 8:
+               echo "tip-top";
+               break;
+    }
+}
 function saw1_excellent(){
     switch (rand(1,14)){
         case 1:
@@ -247,6 +397,7 @@ function saw1_have(){
             break;
     }
 }
+
 function saw1_larger(){
     switch(rand(1,2)){
     case 1:
@@ -324,7 +475,7 @@ function saw1_method(){
     }
 }
 function saw1_meticulously(){
-    switch (rand(1,2)){
+    switch (rand(1,4)){
         case 1:
             echo "meticulously";
             break;
@@ -338,6 +489,47 @@ function saw1_meticulously(){
             echo "varciously";
             break;
     }
+}
+function saw1_modified(){
+    switch (rand(1,6)){
+          case 1:
+               echo "modified";
+               break;
+          case 2:
+               echo "altered";
+               break;
+          case 3:
+               echo "converted";
+               break;
+          case 4:
+               echo "adjusted";
+               break;
+          case 5:
+               echo "fitted";
+               break;
+          case 6:
+               echo "refitted";
+               break;
+     } 
+}
+function saw1_modification(){
+     switch (rand(1,5)){
+          case 1:
+               echo "modification";
+               break;
+          case 2:
+               echo "alteration";
+               break;
+          case 3:
+               echo "adjustment";
+               break;
+          case 4:
+               echo "change";
+               break;
+          case 5:
+               echo "conversion";
+               break;
+     }
 }
 function saw1_model(){
     switch (rand(1,2)){
@@ -359,6 +551,29 @@ function saw1_money(){
             break;
     }
 }
+function saw1_normally(){
+     switch(rand(1,6)){
+          case 1:
+               echo "as a rule";
+               break;
+          case 2:
+               echo "commonly";
+               break;
+          case 3:
+               echo "typically";
+               break;
+          case 4:
+               echo "regularly";
+               break;
+          case 5:
+               echo "typically";
+               break;
+          case 6:
+               echo "ordinarily";
+               break;
+          
+     }
+}
 function saw1_optimised(){
     switch (rand(1,4)){
         case 1;
@@ -372,6 +587,19 @@ function saw1_optimised(){
             break;
         case 4:
             echo "innovated";
+            break;
+    }
+}
+function saw1_outfitted(){
+    switch (rand(1,4)){
+        case 1;
+            echo "outfitted";
+            break;
+        case 2:
+            echo "fitted";
+            break;
+        case 3:
+            echo "changed";
             break;
     }
 }
@@ -416,6 +644,43 @@ function saw1_small(){
       break;
   }
 }
+function saw1_sometimes(){
+     switch(rand(1,11)){
+          case 1:
+               echo "sometimes";
+               break;
+          case 2:
+               echo "at times";
+               break;
+          case 3:
+               echo "every so often";
+               break;
+          case 4:
+               echo "frequently";
+               break;
+          case 5:
+               echo "from time to time";
+               break;
+          case 6:
+               echo "now and again";
+               break;
+          case 7:
+               echo "now and then";
+               break;
+          case 8:
+               echo "occasionally";
+               break;
+          case 9:
+               echo "on occasion";
+               break;
+          case 10:
+               echo "once in a while";
+               break;
+          case 11:
+               echo "periodically";
+               break;
+     }
+}
 function saw1_staff(){
     switch(rand(1,2)){
         case 1:
@@ -424,6 +689,20 @@ function saw1_staff(){
         case 2:
             echo "workers";
             break;
+    }
+}
+function saw1_such(){
+    switch(rand(1,3)){
+        case 1:
+            echo "such";
+            break;
+        case 2:
+            echo "always";
+            break;
+          case 3:
+               echo "sometimes";
+               break;
+          
     }
 }
 function saw1_supplied(){

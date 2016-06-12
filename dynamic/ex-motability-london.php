@@ -38,7 +38,33 @@
     if($county == ''){
         global $wpdb;
         $countys = array(  
-        "West Sussex"
+        "Barking & Dagenham, Greater London",
+        "Barnet, Greater London",
+        "Bexley, Greater London", 
+        "Brent, Greater London", 
+        "Bromley, Greater London",
+        "Camden, Greater London", 
+        "City of London, Greater London", 
+        "Croydon, Greater London", 
+        "Ealing, Greater London", 
+        "Enfield, Greater London",
+        "Essex",
+        "Greenwich, Greater London", 
+        "Hackney, Greater London", 
+        "Hammersmith & Fulham, Greater London", 
+        "Haringey, Greater London", 
+        "Harrow, Greater London", 
+        "Havering, Greater London", 
+        "Hillingdon, Greater London", 
+        "Hounslow, Greater London", 
+        "Islington, Greater London", 
+        "Kensington & Chelsea, Greater London",
+        "Kent",
+        "Kingston upon Thames, Greater London", 
+        "Lambeth, Greater London", 
+        "Lewisham, Greater London", 
+        "Merton, Greater London", 
+        "Newham, Greater London",
         );
     
     echo "<h2>Area's We cover</h2>";
@@ -111,8 +137,6 @@
             saw1_perfect();
             Echo " condition as possible";
     }
-
-
             echo "The ";
             phrase_1a($county);
             switch(rand(1,3)){

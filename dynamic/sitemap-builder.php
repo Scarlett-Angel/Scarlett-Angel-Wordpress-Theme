@@ -1,36 +1,37 @@
 <?php
+add_shortcode('car-finance-sussex-sitemap-sussex', function()
+              {
+                ob_start();
+                global $wpdb;
+                $countys = array('East Sussex', 'West Sussex');
+                foreach ($countys as $county) {
+                $myfile = fopen("$county.xml", "w");
+                 fwrite($myfile, "<?xml version='1.0' encoding='utf-8'?>");
+    fwrite($myfile, "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>");
+               $towns = $wpdb->get_col("SELECT Town from uk_towns where county='$county' order by Town");
+                foreach ($towns as $town) {
+                    fwrite($myfile, "<url>");
+                    fwrite($myfile, "<loc>http://www.carfinancesussex.co.uk/car-finance-in-sussex/?town=" . urlencode($town) . "</loc>");
+                    fwrite($myfile, "<lastmod>2016-05-31</lastmod>");
+                    fwrite($myfile, "<changefreq>daily</changefreq>");
+                    fwrite($myfile, "<priority>1.0</priority>");
+                    fwrite($myfile, "</url>");
+                } //$towns as $town
+                fwrite($myfile, "</urlset>");
+    fclose($myfile);
+        } //$counties as $country
+return ob_get_clean();
+                
+});
+
 
 add_shortcode('ex-mota-london', function()
 {
         ob_start();
     global $wpdb;
     $countys = array(
-      "Barnet, Greater London",
-        "Bexley, Greater London", 
-        "Brent, Greater London", 
-        "Bromley, Greater London",
-        "Camden, Greater London", 
-        "City of London, Greater London", 
-        "Croydon, Greater London", 
-        "Ealing, Greater London", 
-        "Enfield, Greater London",
-        "Essex",
-        "Greenwich, Greater London", 
-        "Hackney, Greater London", 
-        "Hammersmith & Fulham, Greater London", 
-        "Haringey, Greater London", 
-        "Harrow, Greater London", 
-        "Havering, Greater London", 
-        "Hillingdon, Greater London", 
-        "Hounslow, Greater London", 
-        "Islington, Greater London", 
-        "Kensington & Chelsea, Greater London",
-        "Kent",
-        "Kingston upon Thames, Greater London", 
-        "Lambeth, Greater London", 
-        "Lewisham, Greater London", 
-        "Merton, Greater London", 
-        "Newham, Greater London"
+      "West Sussex",
+      "East Sussex"
     );
         foreach ($countys as $county) {
               $myfile = fopen("$county.xml", "w");
@@ -39,7 +40,7 @@ add_shortcode('ex-mota-london', function()
                $towns = $wpdb->get_col("SELECT Town from uk_towns where county='$county' order by Town");
                 foreach ($towns as $town) {
                     fwrite($myfile, "<url>");
-                    fwrite($myfile, "<loc>http://ex-motabilitycarslondon.co.uk/areas-we-cover/?town=" . urlencode($town) . "&amp;county=" . urlencode($county) . "</loc>");
+                    fwrite($myfile, "<loc>http://exmotabilitycarssussex.co.uk/areas-we-cover/?town=" . urlencode($town) . "&amp;county=" . urlencode($county) . "</loc>");
                     fwrite($myfile, "<lastmod>2016-04-18</lastmod>");
                     fwrite($myfile, "<changefreq>daily</changefreq>");
                     fwrite($myfile, "<priority>1.0</priority>");

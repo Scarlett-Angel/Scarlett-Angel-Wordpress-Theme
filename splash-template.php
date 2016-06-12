@@ -44,7 +44,7 @@ echo get_template_directory_uri();
                             </div>
                             </span></a>
                         </div>
-                    </div
+                    </div>
                     
                 </div>
             </div>
