@@ -52,6 +52,32 @@ add_shortcode('ex-mota-london', function()
     return ob_get_clean();
 });
 
+add_shortcode('ex-mota-surrey', function()
+{
+        ob_start();
+    global $wpdb;
+    $countys = array(
+      "Surrey"
+    );
+        foreach ($countys as $county) {
+              $myfile = fopen("$county.xml", "w");
+                 fwrite($myfile, "<?xml version='1.0' encoding='utf-8'?>");
+    fwrite($myfile, "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd'>");
+               $towns = $wpdb->get_col("SELECT Town from uk_towns where county='$county' order by Town");
+                foreach ($towns as $town) {
+                    fwrite($myfile, "<url>");
+                    fwrite($myfile, "<loc>http://exmotabilitycarssussex.co.uk/areas-we-cover/?town=" . urlencode($town) . "&amp;county=" . urlencode($county) . "</loc>");
+                    fwrite($myfile, "<lastmod>2016-04-18</lastmod>");
+                    fwrite($myfile, "<changefreq>daily</changefreq>");
+                    fwrite($myfile, "<priority>1.0</priority>");
+                    fwrite($myfile, "</url>");
+                } //$towns as $town
+                              fwrite($myfile, "</urlset>");
+    fclose($myfile);
+        } //$countries as $country
+    return ob_get_clean();
+});
+
 add_shortcode('sitemap-builder21e', function()
 {
         ob_start();

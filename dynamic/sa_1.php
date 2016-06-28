@@ -30,8 +30,44 @@ function saw2_makeCertain(){
             break;
     }
 }
+function saw2_noCost(){
+       switch(rand(1,3)){
+         case 1:
+            echo "free";
+            break;
+        case 2:
+            echo "no charge";
+            break;
+          case 3:
+            echo "no cost";
+      }
+    }
 /// Needs better plcement
-
+function saw2_salesProspects(){
+     switch (rand(1,7)){
+          case 1:
+               echo "customers";
+               break;
+          case 2:
+               echo "clients";
+               break;
+          case 3:
+               echo "clientele";
+               break;
+          case 4:
+               echo "loyal consumers";
+               break;
+          case 5:
+               echo "patrons";
+               break;
+          case 6:
+               echo "sales prospects";
+               break;
+          case 7:
+               echo "shoppers"
+               break;
+     }
+}
 function saw1n_appraisal(){
     switch (rand(1,2)){
         case 1:
@@ -266,6 +302,16 @@ function word_information(){
             echo "details";
             break;
     }
+}
+function saw2_canBe(){
+    switch(rand(1,2)){
+    case 1:
+      echo "can be";
+      break;
+    case 2:
+      echo "is";
+      break;
+  }
 }
 function word_allOfWhich(){
     switch(rand(1,2)){
@@ -795,20 +841,6 @@ function word_expensive(){
             break;
         case 4:
             echo "pricey";
-            break;
-    }
-}
-
-function word_advertising(){
-    switch (rand(1,3)){
-        case 1:
-            echo "advertising";
-            break;
-        case 2:
-            echo "exhibiting";
-            break;
-        case 3:
-            echo "promoting";
             break;
     }
 }

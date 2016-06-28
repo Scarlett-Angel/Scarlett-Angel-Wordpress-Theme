@@ -1,4 +1,36 @@
 <?php
+function saw1_Advertise(){
+      switch(rand(1,5)){
+         case 1:
+            echo "Advertise";
+            break;
+        case 2:
+            echo "Exhibit";
+            break;
+        case 3:
+            echo "Display";
+            break;
+        case 4:
+            echo "Promote";
+            break;
+          case 5:
+            echo "Sell";
+            break;
+      }
+    }
+function saw1_advertising(){
+    switch (rand(1,3)){
+        case 1:
+            echo "advertising";
+            break;
+        case 2:
+            echo "exhibiting";
+            break;
+        case 3:
+            echo "promoting";
+            break;
+    }
+}
 function saw1_any(){
      switch(rand(1,2)){
         case 1:
@@ -210,6 +242,7 @@ function saw1_choose(){
             break;
     }
 }
+
 function saw1_dont(){
     switch (rand(1,2)){
         case 1;
@@ -633,6 +666,19 @@ function saw1_perfect(){
             echo "unblemished";
             break;
     }
+}
+function saw1_reach(){
+     switch(rand(1,3)){
+          case 1:
+               echo "reach";
+               break;
+          case 2:
+               echo "grasp";
+               break
+          case 3:
+               echo "scope";
+               break;
+     }
 }
 function saw1_small(){
     switch(rand(1,2)){
