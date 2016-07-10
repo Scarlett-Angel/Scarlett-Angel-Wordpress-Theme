@@ -1,4 +1,17 @@
 <?php
+function saw1_accept(){
+     switch(rand(1,3)){
+    case 1:
+      echo "accept";
+      break;
+    case 2:
+      echo "like";
+      break;
+    case 3:
+      echo "agree with";
+      break;
+  }
+}
 function saw1_Advertise(){
       switch(rand(1,5)){
          case 1:
@@ -15,6 +28,25 @@ function saw1_Advertise(){
             break;
           case 5:
             echo "Sell";
+            break;
+      }
+    }
+    function saw1_promote(){
+      switch(rand(1,5)){
+         case 1:
+            echo "advertise";
+            break;
+        case 2:
+            echo "exhibit";
+            break;
+        case 3:
+            echo "display";
+            break;
+        case 4:
+            echo "promote";
+            break;
+          case 5:
+            echo "sell";
             break;
       }
     }
@@ -141,6 +173,61 @@ function saw1_condition(){
                echo "status";
                break;
           
+    }
+}
+function saw1_nEasy(){
+    switch (rand(1,17)){
+        case 1;
+            echo "n easy";
+            break;
+        case 2:
+            echo "n accessible";
+            break;
+        case 3:
+            echo " simple";
+            break;
+        case 4:
+            echo " straightforward";
+            break;
+        case 5:
+            echo "n uncomplicated";
+            break;
+        case 6:
+            echo " painless";
+            break;
+        case 7:
+            echo " manageable";
+            break;
+        case 8:
+            echo "n easily done";
+            break;
+        case 9:
+            echo " no problem";
+            break;
+        case 10:
+            echo " no bother";
+            break;
+        case 11:
+            echo " no problem";
+            break;
+        case 12:
+            echo " no sweat";
+            break;
+        case 13:
+            echo " no trouble";
+            break;
+        case 14:
+            echo " piece of cake";
+            break;
+        case 15:
+            echo "n undemanding";
+            break;
+        case 16:
+            echo "n uninvolved";
+            break;
+        case 17:
+            echo "n untroublesome";
+            break;
     }
 }
 function saw1_easier(){
@@ -674,7 +761,7 @@ function saw1_reach(){
                break;
           case 2:
                echo "grasp";
-               break
+               break;
           case 3:
                echo "scope";
                break;

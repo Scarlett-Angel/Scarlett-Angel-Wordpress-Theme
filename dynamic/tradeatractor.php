@@ -6,8 +6,7 @@
   //  include('sitemap-builder.php');
  add_shortcode('scarlett-angel-supercharged-dynamic-page', function(){
     ob_start();
-    ?>
-     <style>
+    echo "<style>
         .linksers {
             text-align:center;
         }
@@ -30,10 +29,14 @@
             -webkit-transform: scale(1.3);
             transform: scale(1.3);
       }
-    </style><?php
+    </style>";
+     
     $county = isset($_GET['county']) ? $_GET['county'] : '';
     $county     = urldecode($county);
     $country = isset($_GET['country']) ? $_GET['country'] : '';
+    $country = urldecode($country);
+    $type = isset($_GET['type']) ? $_GET['type'] : 'farm machinery';
+    $type = urldecode($type);
     if($country == ''){
         global $wpdb;
         $countries = array(  
@@ -58,16 +61,18 @@
     $counties = $wpdb->get_col("SELECT DISTINCT County from uk_towns where Country='$country' order by County");
     ?><p class="linksers"><?php
      foreach ($counties as $countie){
-        echo "<strong><a class='hvr-grow' href='?country=" . urlencode($country) . "&county=" . urlencode($countie) . "'>$countie</a></strong>";
+        echo "<strong><a class='hvr-grow' href='?country=" . urlencode($country) . "&county=" . urlencode($countie) . "&='>$countie</a></strong>";
  }
  ?></p><?php
  }
  else{
+    echo "<div align='center'>";
    echo "<p>";
    echo "Trade a Tractor is more than just a place to ";
    saw1_buy();
-   echo " and sell new and used farm machinery.";
-   if (rand(1,2) = 1){
+   echo " and sell new and used farm machinery. ";
+   $rand = rand(1,2);
+   if ($rand = 1){
     echo "At Trade a Tractor you can ";
     saw1_Advertise();
     echo " your farm machinery, trucks and lorries for ";
@@ -105,40 +110,122 @@
                 saw1_Advertise();
                 echo " your ";
                 saw1_car();
-                echo ", tractor or farm machinery today. "
+                echo ", tractor or farm machinery today. ";
                 break;
             case 2:
-                
+                echo "Don't hesitate today to ";
+                saw1_promote();
+                echo " your tractor, farm machiney or ";
+                saw1_car();
+                echo ". ";
+                break;
         }
-       Advertise your vehicle, tractory or farm machinery.
-       Sign up for a free memership today.
-   
-   Advertising your farm machinery could not be simpler simply sign up for a free membership today and advertise your vehicle, tractor or machinery for sale and reach new potential buyers across the UK today.
-   saw1_advertising();
-   echo " your farm machinery could not"
- Advertising could not be simpler, simply sign up for a free membership today and advertise your vehicle, tractor or machinery for sale and reach 1000's of potential buyers across the UK today, for FREE.</p>
+        break;
+    case 2:
+        echo "Sign up for a free membership today. ";
+        break;
+        }
+        echo "<h3>";
+        switch(rand(1,4)){
+            case 1:
+                echo "So why not sign up today for a free account and start to ";
+                saw1_promote();
+                echo " and ";
+                saw1_buy();
+                echo " farm machinery ";
+                saw2_rightnow();
+                echo ". ";
+                break;
+            case 2:
+                saw2_rightnow();
+                echo " you can ";
+                saw1_buy();
+                echo " and ";
+                saw1_promote();
+                echo " farm mchinery when you sign up today";
+                break;
+            case 3:
+                echo "What are you waiting for? ........ Sign up ";
+                saw2_rightNow();
+                echo " and give us a try";
+                break;
+            case 4:
+                echo "Sign up ";
+                saw2_rightNow();
+                echo " what are you waiting for?";
+        }
+        echo "</h3>";
 
-
-
-
-
-<p>So why not sign up for a FREE account today and start selling.</p>
-
-
-
+ echo "<p>";
+ switch(rand(1,3)){
+    case 1:
+        echo "Using our website will allow you to ";
+        saw1_Advertise();
+        echo " your " . $type . " for ";
+        saw2_noCost();
+        echo " in " . $county . ". ";
+        break;
+    case 2:
+        echo "Using our website will allow you to find " . $type . " in " . $county . ". ";
+        break;
+    case 3:
+        echo "When you search our website you can ";
+        saw1_buy();
+        echo " ". $type . " in " . $county . ". ";       
+ }
+ echo "Are you a professional trader? ";
+ switch (rand(1,3)){
+    case 1:
+        echo "We ";
+        saw1_accept();
+        echo " all kinds of traders on our website. ";
+        switch (rand(1,2)){
+            case 1:
+                echo " To help your business we have created a";
+                saw1_nEasy();
+                echo " signup process for all dealers. ";
+                break;
+            case 2:
+                echo "Our website can allow you to advertise multiple items with no limit for ";
+                saw2_noCost();
+                echo ". ";
+                break;
+            }
+            break;
+    case 2:
+        echo " To help your business we have created a";
+        saw1_nEasy();
+        echo " signup process for all dealers. ";
+        switch(rand(1,2)){
+            case 1:
+                echo "Our website is optimised for crawling from all major search engines. ";
+                break;
+        }
+        break;
+    case 3:
+        echo "Our website can allow you to advertise multiple items with no limit for ";
+        saw2_noCost();
+        echo ". ";
+ }
+ echo "</p>";
+ echo "</div>";
  
-
-
-
-<p>Are you a trader? Then dont worry, we like traders here at Trade a Tractor, thats why we have allowed a simple dealer signup that will not only allow you to advertise your multiple items, but also advertise your business on our dealer directory, which is optimised to crawl major search engines. All of this for FREE.</p>
-
-
-
  
+ }
+So whether your looking to sell a one off vehicle or machinery
+or you need to sell multplie items daily
+ we have everything you need
+ and best of all you can sell for FREE.
+ Trade a tractor is run by cogmans-farm-machinery
+/*
 
 
 
-<p>So whether your looking to sell a one off vehicle or machinery, or you need to sell multplie items daily, we have everything you need, and best of all you can sell for FREE.</p>So whether your looking to sell a one off vehicle or machinery, or you need to sell multplie items daily, we have everything you need, and best of all you can sell for FREE.
+ opopopo
+
+
+
+<p>, ,, </p>So whether your looking to sell a one off vehicle or machinery, or you need to sell multplie items daily, we have everything you need, and best of all you can sell for FREE.
 
 
 
@@ -160,7 +247,7 @@
     
  }
 
-      
+      */
     return ob_get_clean();
 });
 ?>

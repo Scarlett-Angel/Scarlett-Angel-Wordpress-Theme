@@ -64,7 +64,7 @@ function saw2_salesProspects(){
                echo "sales prospects";
                break;
           case 7:
-               echo "shoppers"
+               echo "shoppers";
                break;
      }
 }
@@ -185,19 +185,7 @@ function word_wanted(){
         break;
 }
 }
-function word_accept(){
-     switch(rand(1,3)){
-    case 1:
-      echo "accept";
-      break;
-    case 2:
-      echo "like";
-      break;
-    case 3:
-      echo "agree with";
-      break;
-  }
-}
+
 function word_offer(){
      switch(rand(1,3)){
     case 1:
@@ -382,7 +370,7 @@ function word_call(){
             break;
     }
 }
-function word_rightNow(){
+function saw2_rightNow(){
     switch(rand(1,9)){
         case 1:
             echo "now";
@@ -428,61 +416,7 @@ function word_not(){
             echo "shouldn't you";
     }
 }
-function word_nEasy(){
-    switch (rand(1,17)){
-        case 1;
-            echo "n easy";
-            break;
-        case 2:
-            echo "n accessible";
-            break;
-        case 3:
-            echo " simple";
-            break;
-        case 4:
-            echo " straightforward";
-            break;
-        case 5:
-            echo "n uncomplicated";
-            break;
-        case 6:
-            echo " painless";
-            break;
-        case 7:
-            echo " manageable";
-            break;
-        case 8:
-            echo "n easily done";
-            break;
-        case 9:
-            echo " no problem";
-            break;
-        case 10:
-            echo " no bother";
-            break;
-        case 11:
-            echo " no problem";
-            break;
-        case 12:
-            echo " no sweat";
-            break;
-        case 13:
-            echo " no trouble";
-            break;
-        case 14:
-            echo " piece of cake";
-            break;
-        case 15:
-            echo "n undemanding";
-            break;
-        case 16:
-            echo "n uninvolved";
-            break;
-        case 17:
-            echo "n untroublesome";
-            break;
-    }
-}
+
 function word_looking(){
     switch (rand(1,4)){
         case 1:
