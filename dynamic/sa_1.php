@@ -1,4 +1,24 @@
 <?php
+function saw2_planningTo(){
+      switch(rand(1,5)){
+         case 1:
+            echo "planning";
+            break;
+        case 2:
+            echo "wanting";
+            break;
+        case 3:
+            echo "expecting";
+            break;
+        case 4:
+            echo "looking";
+            break;
+          case 5:
+            echo "anticipating";
+            break;
+      }
+	  echo " to";
+    }
 function saw2_couldNot(){
     switch(rand(1,2)){
         case 1:
