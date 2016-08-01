@@ -357,23 +357,9 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
  * Make this absolute positioned
  * at the top left of the screen
  */
-.menu-primary-menu-links-container
-{
-  position: absolute;
-  width: 150px;
-  margin: 0px 0 0 0px;
-  padding: 0px;
-  
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari padding-top: 125px;*/
-  
-  
-}
 
-#menu-primary-menu-links
+
+.menu
 {
   
   width: 150px;
@@ -392,7 +378,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu-primary-menu-links li
+.menu li
 {
   padding: 10px 5px;
   font-size: 22px;
