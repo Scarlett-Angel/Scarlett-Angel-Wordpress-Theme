@@ -220,53 +220,16 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
 
 #left-bar-top{vertical-align: middle;}
 
-/* Navigation Menus 
-.site-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+/**
+ *Menu
+ */
 
-.site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
-.site-nav ul:after { clear: both; }
-.site-nav ul { *zoom: 1; } /* only for IEv5-v7. used as a star property hackfloat: left;  */
-/*
-.site-nav ul li {
-    list-style: none;
-    float:middle;
-}
-
-.left-bar-nav ul a {
-    width: 100%;
-    background-color: #f1f1f1;
-}
-.left-bar-nav li a {
-    display: block;
-    color: #000;
-    padding: 15px 36px;
-    text-decoration: none;
-}
-
-.left-bar-nav li {
-  margin-bottom: 10px;
-}
-
-.left-bar-nav li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-.left-bar-nav a {
-  transition: color 0.3s ease;
-}*/
-
-
-
-#MenuSwitch {
+#menuToggle
+{
   display: block;
   position: relative;
-  top: 30px;
-  left: 30px;
+  top: 50px;
+  left: 50px;
   
   z-index: 1;
   
@@ -274,7 +237,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
   user-select: none;
 }
 
-#MenuSwitch input
+#menuToggle input
 {
   display: block;
   width: 40px;
@@ -294,7 +257,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
 /*
  * Just a quick hamburger
  */
-#MenuSwitch span
+#menuToggle span
 {
   display: block;
   width: 33px;
@@ -314,12 +277,12 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
               opacity 0.55s ease;
 }
 
-#MenuSwitch span:first-child
+#menuToggle span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#MenuSwitch span:nth-last-child(2)
+#menuToggle span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
@@ -328,7 +291,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#MenuSwitch input:checked ~ span
+#menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
@@ -338,7 +301,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
 /*
  * But let's hide the middle one.
  */
-#MenuSwitch input:checked ~ span:nth-last-child(3)
+#menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
@@ -347,7 +310,7 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
 /*
  * Ohyeah and the last one should go the other direction
  */
-#MenuSwitch input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ span:nth-last-child(2)
 {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
@@ -357,39 +320,35 @@ footer {background-color: black;background-color: black; color:white; z-index: 9
  * Make this absolute positioned
  * at the top left of the screen
  */
-
-
-.menu
+#menu
 {
-  
-  width: 150px;
-  margin: 0px 0 0 0px;
-  padding: 0px;
-  
+  position: absolute;
+  width: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 20px;
+  padding-top: 125px;
   
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari padding-top: 125px;position: absolute;*/
+  /* to stop flickering of text in safari */
   
   transform-origin: 0% 0%;
-  transform: translate(10%, 0);
+  transform: translate(-100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-.menu li
+#menu li
 {
-  padding: 10px 5px;
+  padding: 10px 0;
   font-size: 22px;
 }
-
 
 /*
  * And let's fade it in from the left
  */
-
-#MenuSwitch input:checked ~ ul
+#menuToggle input:checked ~ ul
 {
   transform: scale(1.0, 1.0);
   opacity: 1;
