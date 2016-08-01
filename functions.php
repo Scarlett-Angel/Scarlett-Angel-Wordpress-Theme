@@ -1,7 +1,6 @@
 <?php
 //Body classes
 include ('dynamic/web-design.php');
-include ('dynamic/sitemap-builder.php');
 //add to splash-template page template
 function SA_add_body_class ($classes){
 	if (is_page_template('splash-template.php')){
@@ -65,3 +64,4 @@ register_nav_menus(array(
 ));
 
 ?>
+
